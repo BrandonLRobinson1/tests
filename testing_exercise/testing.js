@@ -23,4 +23,16 @@ var expand = (array, multiplyer) => {
   return results
 }
 
-expand([1,2, 4],2)
+var acceptNumbersOnly = function(){
+  var args = [].slice.call(arguments); // underscore way
+  var status = true;
+  args.forEach( (item, index)=>{
+    typeof item === 'number' ? console.log('true') : status = false;
+    // if ( typeof item !== 'number' ) {
+    //   status = false
+    // }
+  } );
+  return status
+}
+
+acceptNumbersOnly(1,2,'3',4,5)
