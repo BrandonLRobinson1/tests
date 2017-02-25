@@ -42,10 +42,30 @@ var mergeArrays = function(arr1, arr2){
   biggie.sort(function(a, b) {
     return a - b;
   });
-  // console.log(biggie)
   return biggie;
 };
 
-mergeArrays([10,5],[25,15,20])
+// mergeArrays([10,5],[25,15,20])
+var tun1= {
+    name: "Foo",
+    num: 33
+  }
+  var tun2 = {
+    test: "thing",
+    num: 55
+  }
 
-//var mergeObjects = function(){};
+var mergeObjects = function(obj1, obj2){
+  var results = {};
+  for(var key in obj1) {
+    results[key] = obj1[key];
+  }
+  for(var key in obj2) {
+    results[key] = obj2[key];
+  }  
+  console.log(results)
+  return results;
+};
+
+mergeObjects(tun1, tun2);
+
