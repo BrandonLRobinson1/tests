@@ -35,4 +35,17 @@ var acceptNumbersOnly = function(){
   return status
 }
 
-acceptNumbersOnly(1,2,'3',4,5)
+// acceptNumbersOnly(1,2,'3',4,5)
+
+var mergeArrays = function(arr1, arr2){
+  var biggie = arr1.concat(arr2);
+  biggie.sort(function(a, b) {
+    return a - b;
+  });
+  // console.log(biggie)
+  return biggie;
+};
+
+mergeArrays([10,5],[25,15,20])
+
+//var mergeObjects = function(){};

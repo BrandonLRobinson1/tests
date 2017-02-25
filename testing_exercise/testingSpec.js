@@ -30,9 +30,13 @@ describe('acceptNumbersOnly', () => {
 
  //look up deep equal for merge and below
 describe('mergeArrays', () => {
-  it('should merger two arrays', ()=>{
+  it('should merge two arrays', ()=>{
     //may have to deep equal
-    expect( mergeArrays([2,1],[3,4,5]) ).to.deep.equal([1,2,3,4]);
+    expect( mergeArrays([2,1],[3,4,5]) ).to.deep.equal( [1,2,3,4,5] );
+  });
+  it('should sort two arrays', ()=>{
+    //may have to deep equal
+    expect( mergeArrays([10,5],[25,15,20]) ).to.deep.equal( [5,10,15,20,25] );
   });
  });
 
