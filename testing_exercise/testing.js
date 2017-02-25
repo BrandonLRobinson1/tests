@@ -1,14 +1,26 @@
 var replaceWith = (word, letterToReplace, letterToReplaceWith) => {
-  var split = word.split('');
+  let split = word.split('');
   split.map( (item, index, collection) => {
-    if ( item === letterToReplace ){
-      // console.log(collection[index], letterToReplaceWith)
+    if ( item === letterToReplace ) {
       collection[index] = letterToReplaceWith;
-      // console.log(collection[index], ' after')
     }
   })
-  console.log(split)
+  console.log(split.join(""));
   return split.join("");
 }
 
-replaceWith("awesome", "e", "z")
+var expand = (array, multiplyer) => {
+  var results = [];
+  let tempHold = [];
+  for(var i = 0; i < multiplyer; i++){
+    tempHold.push(array)
+  }
+  tempHold.forEach( (item, index) => {
+    results = results.concat( item );
+  } );
+
+  console.log(results)
+  return results
+}
+
+expand([1,2, 4],2)
