@@ -6,7 +6,7 @@ var replaceWith = (word, letterToReplace, letterToReplaceWith) => {
     }
   })
   console.log(split.join(""));
-  return split.join("");
+  return split.join(""); 
 }
 
 var expand = (array, multiplyer) => {
