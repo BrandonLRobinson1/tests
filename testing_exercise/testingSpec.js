@@ -5,7 +5,7 @@ var expect = chai.expect;
 describe('replaceWith', () => {
   it('Should take a string, and replace the letters with that you pass in', () => {
     expect( replaceWith("awesome", "e", "z") ).to.equal('awzsomz'); 
-  });
+  }); 
   it('Should be case sensitive', () => {
     expect( replaceWith('Foo', 'F', 'B') ).to.equal('Boo');
   })
